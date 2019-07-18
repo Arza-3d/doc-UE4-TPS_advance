@@ -7,6 +7,7 @@
     <link href="https://image.ibb.co/nqbdHJ/titlelogo.png" rel="icon">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link href="https://raw.githack.com/Arza-3d/ar3.js/master/stylesheets/ar3.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/treant-js/1.0/Treant.css" type="text/css"/>
     <!--
     <script type="text/javascript" async
     src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
@@ -46,26 +47,74 @@
       </table>
 
       <p>
-        This is study project of making third person shooter game.
-        Try to make the game using the Paragon asset from Epic.
-        Currently focus on the offline, prolly will edit it to be ready for online later,
-        after all the TPS features is recreated in this project.
+        This is ongoing study project of making <b>third person shooter</b> game.
+        The goal is to find problems during and
       </p>
   </header>
   <main class="aside-nav-target-r3">
 
-      <div data-title-r3="material blend">
+      <div data-title-r3="data">
 
         </script>
-        <h2>if material blend</h2>
+        <h2>player character</h2>
 
-        <h3>color burn</h3>
+        <h3>data structure</h3>
         <section>
-          $$g_s =  1 - ( 1 - a / b) $$
-          <iframe src="https://blueprintue.com/render/w_7omxkf" scrolling="no" style="height:480px;width:80%"></iframe>
+          <div id="tree-simple"> </div>
+        </section>
+      </div>
+      <div data-title-r3="char">
+        <h2>char</h2>
+        <h3>aiming</h3>
+        <section>
+          <iframe src="https://blueprintue.com/render/w_7omxkf"></iframe>
         </section>
       </div>
     </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.8/raphael.min.js"></script>
+    <!--
+    <script src="https://raw.githack.com/fperucic/treant-js/commit/a5f95627baa265a891858678de47dff180848613"></script>
+    -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/treant-js/1.0/Treant.min.js"></script>
+
+    <script type="text/javascript">
+
+    let simple_chart_config = {
+    chart: {
+        container: "#tree-simple"
+    },
+
+        nodeStructure: {
+
+          innerHTML: "<code><a href='https://api.unrealengine.com/INT/API/Runtime/Engine/GameFramework/ACharacter/index.html'>ACharacter</a></code>",
+          children: [
+            {
+              innerHTML: "<code title='TPS character class from the TPS template'>ThirdPersonCharacter</code>",
+              children: [
+                  {
+                      innerHTML: "<code><a href='https://github.com/Arza-3d/TPS_study/blob/master/Content/Char/CH_TPCharacter.uasset' title='char with aiming ability'>CH_TPShooter</a></code>"
+                  },
+                  {
+                    innerHTML: "<code><a href='https://github.com/Arza-3d/TPS_study/blob/master/Content/Char/CH_TPCharacter.uasset' title='char that can do melee combos and has no aiming ability'>CH_TPMelee</a></code>"
+                  }
+              ]
+            },
+            {
+              innerHTML: "<code><a href='https://github.com/Arza-3d/TPS_study/blob/master/Content/Char/CH_TPCharacter.uasset'>CH_Enemy</a></code>"
+            }
+          ]
+
+        }
+    };
+
+
+      //var my_chart = new Treant(simple_chart_config);
+      var chart = new Treant(simple_chart_config);
+
+    </script>
     <script src="https://raw.githack.com/Arza-3d/ar3.js/master/ar3.min.js"></script>
+
   </body>
 </html>
