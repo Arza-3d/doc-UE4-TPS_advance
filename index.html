@@ -62,6 +62,42 @@
         <section>
           <div id="tree-simple"> </div>
         </section>
+
+        <h3 id="ThirdPersonCharacter">ThirdPersonCharacter</h3>
+        <section>
+          <code><a href="https://github.com/Arza-3d/TPS_study/blob/master/Content/Character/ThirdPersonCharacter.uasset">ThirdPersonCharacter</a></code>
+          <hr>
+          <ol>
+            <li>add 2 floats to track char movement for anim blend</li>
+          </ol>
+        </section>
+
+        <h3 id="CH_TPShooter">CH_TPShooter</h3>
+        <section>
+          <div>
+            <code>ThirdPersonCharacter</code>
+            ►
+            <code><a href="https://github.com/Arza-3d/TPS_study/blob/master/Content/Character/Children/TPShooter/CH_TPShooter.uasset">CH_TPShooter</a></code>
+
+          </div>
+          <hr>
+
+          <ol>
+            <li>add aiming ability
+              <br>update:
+              <ul>
+                <li>can't aim while jumping (editable)</li>
+              </ul>
+            </li>
+            <li>add ability to shoot to the target at center of the screen.
+              <br>update:
+              <ul>
+                <li>if socket doesn't exist will shoot from around the head</li>
+              </ul>
+            </li>
+          </ol>
+
+        </section>
       </div>
       <div data-title-r3="char">
         <h2>char</h2>
@@ -88,21 +124,21 @@
 
         nodeStructure: {
 
-          innerHTML: "<code><a href='https://api.unrealengine.com/INT/API/Runtime/Engine/GameFramework/ACharacter/index.html'>ACharacter</a></code>",
+          innerHTML: "<code title='base character class from the engine'><a href='https://api.unrealengine.com/INT/API/Runtime/Engine/GameFramework/ACharacter/index.html'>ACharacter</a></code>",
           children: [
             {
-              innerHTML: "<code title='TPS character class from the TPS template'>ThirdPersonCharacter</code>",
+              innerHTML: "<code title='TPS character class from the TPS template'><a href='#ThirdPersonCharacter'>ThirdPersonCharacter</a></code>",
               children: [
                   {
-                      innerHTML: "<code><a href='https://github.com/Arza-3d/TPS_study/blob/master/Content/Char/CH_TPCharacter.uasset' title='char with aiming ability'>CH_TPShooter</a></code>"
+                      innerHTML: "<code title='char with aiming ability'><a href='#CH_TPShooter'>CH_TPShooter</a></code>"
                   },
                   {
-                    innerHTML: "<code><a href='https://github.com/Arza-3d/TPS_study/blob/master/Content/Char/CH_TPCharacter.uasset' title='char that can do melee combos and has no aiming ability'>CH_TPMelee</a></code>"
+                    innerHTML: "<code title='char that can do melee combos and has no aiming ability'>CH_TPMelee</code>"
                   }
               ]
             },
             {
-              innerHTML: "<code><a href='https://github.com/Arza-3d/TPS_study/blob/master/Content/Char/CH_TPCharacter.uasset'>CH_Enemy</a></code>"
+              innerHTML: "<code title='enemy character'>CH_Enemy</code>"
             }
           ]
 
