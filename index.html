@@ -60,30 +60,40 @@
 
         <p>Below is the data structure for the player classes</p>
         <div id="tree-simple"> </div>
-        <h3>data structure</h3>
-        <section>
 
+        <h3 id="TPS_studyCharacter">TPS_studyCharacter</h3>
+        <section>
+          <p>
+            This is the cpp class that will be based of the third person shooter character.
+            Currently this is just the default Third Person C++ template.
+          </p>
+          <div class="tab-r3">
+              <nav>
+               <a><var>TPS_studyCharacter</var>.h</a>
+               <span>+</span>
+               <a><var>TPS_studyCharacter</var>.cpp</a>
+             </nav>
+             <div>
+               <div>
+                 <p>class member declaration:</p>
+                 <script src="https://gist-it.appspot.com/https://github.com/Arza-3d/TPS_study/blob/master/Source/TPS_study/TPS_studyCharacter.h"></script>
+               </div>
+               <div>
+                 <p>Sprint jump mechanic logic:</p>
+                 <script src="https://gist-it.appspot.com/https://github.com/Arza-3d/TPS_study/blob/master/Source/TPS_study/TPS_studyCharacter.cpp"></script>
+               </div>
+             </div>
+            </div>
         </section>
 
-        <h3 id="ThirdPersonCharacter">ThirdPersonCharacter</h3>
+        <h3 id="CH_TPShooter">ThirdPersonCharacter</h3>
         <section>
-          <code><a href="https://github.com/Arza-3d/TPS_study/blob/master/Content/Character/ThirdPersonCharacter.uasset">ThirdPersonCharacter</a></code>
+          <code><a href="https://github.com/Arza-3d/TPS_study/blob/master/Content/Character/CH_TPShooter.uasset">CH_TPShooter</a></code>
           <hr>
           <ol>
             <li>add 2 floats to track char movement for anim blend</li>
             <li>add function that destroy array of particles</li>
           </ol>
-        </section>
-
-        <h3 id="CH_TPShooter">CH_TPShooter</h3>
-        <section>
-          <div>
-            <code>ThirdPersonCharacter</code>
-            ►
-            <code><a href="https://github.com/Arza-3d/TPS_study/blob/master/Content/Character/Children/TPShooter/CH_TPShooter.uasset">CH_TPShooter</a></code>
-
-          </div>
-          <hr>
 
           <ol>
             <li>add aiming ability
@@ -111,8 +121,8 @@
               </ol>
             </li>
           </ol>
-
         </section>
+
       </div>
       <div data-title-r3="char">
         <h2>char</h2>
@@ -124,48 +134,30 @@
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.8/raphael.min.js"></script>
-    <!--
-    <script src="https://raw.githack.com/fperucic/treant-js/commit/a5f95627baa265a891858678de47dff180848613"></script>
-    -->
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/treant-js/1.0/Treant.min.js"></script>
 
-    <script type="text/javascript">
-
-    let simple_chart_config = {
-    chart: {
-        container: "#tree-simple"
-    },
-
-        nodeStructure: {
-
-          innerHTML: "<code title='base character class from the engine'><a href='https://api.unrealengine.com/INT/API/Runtime/Engine/GameFramework/ACharacter/index.html'>ACharacter</a></code>",
-          children: [
-            {
-              innerHTML: "<code title='TPS character class from the TPS template'><a href='#ThirdPersonCharacter'>ThirdPersonCharacter</a></code>",
-              children: [
-                  {
-                      innerHTML: "<code title='char with aiming ability'><a href='#CH_TPShooter'>CH_TPShooter</a></code>"
-                  },
-                  {
-                    innerHTML: "<code title='char that can do melee combos and has no aiming ability'>CH_TPMelee</code>"
-                  }
-              ]
-            },
-            {
-              innerHTML: "<code title='enemy character'>CH_Enemy</code>"
-            }
-          ]
-
-        }
-    };
-
-
-      //var my_chart = new Treant(simple_chart_config);
-      var chart = new Treant(simple_chart_config);
-
-    </script>
+    <script src="charStructure.js"></script>
     <script src="https://raw.githack.com/Arza-3d/ar3.js/master/ar3.min.js"></script>
-
+    <script type="text/javascript">
+      $('.com').css(
+        {
+          'color' : 'rgba(0,0,0,0.25)'
+        }
+      );
+      $('.com:contains("#include")').css(
+        {
+          'font-style' : 'normal',
+          'color' : 'rgb(0,0,0)'
+        }
+      );
+      $('.com:contains("#pragma")').css(
+        {
+          'font-style' : 'normal',
+          'color' : 'rgb(0,0,0)'
+        }
+      );
+    </script>
   </body>
 </html>
