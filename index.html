@@ -22,7 +22,7 @@
   <script src="https://raw.githack.com/Arza-3d/ar3.js/master/ar3header.js"></script>
   <header>
     <h1>TPS Study</h1>
-      <h4>Third Person Study</h4>
+      <h4>Third Person Shooter Study</h4>
       <table>
         <tr>
           <td>game engine</td>
@@ -48,25 +48,57 @@
 
       <p>
         This is ongoing study project of making <b>third person shooter</b> game.
-        The goal is to find problems during and
+        The goal is to list the problems and solutions of TPS game development.
       </p>
   </header>
   <main class="aside-nav-target-r3">
 
-      <div data-title-r3="data">
+      <div data-title-r3="player">
 
         </script>
         <h2>player character</h2>
 
         <p>Below is the data structure for the player classes</p>
-        <div id="tree-simple"> </div>
+        <div id="tree-simple" style="overflow:auto"> </div>
 
         <h3 id="TPS_studyCharacter">TPS_studyCharacter</h3>
         <section>
           <p>
-            This is the C++ class that will be based of the third person shooter character.
+            This is the <b>C++</b> class that will be based of the third person shooter character.
             Currently this is just the default Third Person C++ template.
           </p>
+          <p>
+            Below is the main functionality of this class:
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>functionality</th>
+                <th>function()</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="font-size:18px">🡄 🡆 🡅 🡇</td>
+                <td>
+                  <code>MoveRight()</code> ,
+                  <code>MoveForward()</code>
+                </td>
+              </tr>
+              <tr>
+                <td>jump</td>
+                <td><code>Jump()</code> , <code>StopJumping()</code></td>
+              </tr>
+              <tr>
+                <td><img src="https://i.ibb.co/12sxdYM/m-click25.png" alt="mouse input" style="border:none"></td>
+                <td>
+                  <code>TurnAtRate()</code>,
+                  <code>LookUpRate()</code>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <hr>
           <div class="tab-r3">
               <nav>
                <a><var>TPS_studyCharacter</var>.h</a>
@@ -79,7 +111,7 @@
                  <script src="https://gist-it.appspot.com/https://github.com/Arza-3d/TPS_study/blob/master/Source/TPS_study/TPS_studyCharacter.h"></script>
                </div>
                <div>
-                 <p>Sprint jump mechanic logic:</p>
+                 <p>class functionality:</p>
                  <script src="https://gist-it.appspot.com/https://github.com/Arza-3d/TPS_study/blob/master/Source/TPS_study/TPS_studyCharacter.cpp"></script>
                </div>
              </div>
