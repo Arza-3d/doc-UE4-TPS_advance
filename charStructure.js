@@ -3,6 +3,9 @@
   let simple_chart_config = {
     chart: {
         container: "#tree-simple"
+        ,connectors: {
+            type: 'step'
+        }
     },
 
     nodeStructure: {
@@ -16,28 +19,44 @@
           innerHTML: "<code title='TPS character class from the TPS template'><a href='#CH_TPShooter'>CH_TPShooter</a></code>",
           children: [
               {
-                  innerHTML: "<code title='.'><a href='#CH_Belica'>CH_Belica</a></code>"
+                  innerHTML:
+                  "<a href='#CH_Belica'><img src='https://i.ibb.co/DLKb15z/TPS-belica.jpg'/>" +
+                  "<code>CH_Belica</code></a>"
               }
               ,{
-                  innerHTML: "<code title='.'><a href='#CH_Drongo'>CH_Drongo</a></code>"
+                  innerHTML:
+                  "<a href='#CH_Drongo'><img src='https://i.ibb.co/Lt574qH/TPS-drongo.jpg'/>"+
+                  "<code>CH_Drongo</code></a>"
               }
               ,{
-                  innerHTML: "<code title='.'><a href='#CH_GrimExe'>CH_GrimExe</a></code>"
+                  innerHTML:
+                  "<a href='#CH_Grimexe'><img src='https://i.ibb.co/p06fqY4/TPS-grimexe.jpg'/>"+
+                  "<code>CH_Grimexe</code></a>"
               }
               ,{
-                  innerHTML: "<code title='.'><a href='#CH_Howitzer'>CH_Howitzer</a></code>"
+                  innerHTML:
+                  "<a href='#CH_Howitzer'><img src='https://i.ibb.co/SNvxH0y/TPS-howitzer.jpg'/>"+
+                  "<code>CH_Howitzer</code></a>"
               }
               ,{
-                  innerHTML: "<code title='.'><a href='#CH_Revenant'>CH_Revenant</a></code>"
+                  innerHTML:
+                  "<a href='#CH_Revenant'><img src='https://i.ibb.co/8d7Kdps/TPS-revenant.jpg'/>"+
+                  "<code>CH_Revenant</code></a>"
               }
               ,{
-                    innerHTML: "<code title='..'><a href='#CH_Sparrow'>CH_Sparrow</a></code>"
+                  innerHTML:
+                  "<a href='#CH_Sparrow'><img src='https://i.ibb.co/8PHRqZN/TPS-sparrow.jpg'/>"+
+                  "<code>CH_Sparrow</code></a>"
               }
               ,{
-                  innerHTML: "<code title='.'><a href='#CH_TwinBlast'>CH_TwinBlast</a></code>"
+                  innerHTML:
+                  "<a href='#CH_Twinblast'><img src='https://i.ibb.co/8r6dfw4/TPS-twinblast.jpg'/>"+
+                  "<code>CH_Twinblast</code></a>"
               }
               ,{
-                  innerHTML: "<code title='.'><a href='#CH_Wraith'>CH_Wraith</a></code>"
+                  innerHTML:
+                  "<a href='#CH_Wraith'><img src='https://i.ibb.co/SsC7JnT/TPS-wraith.jpg'/>"+
+                  "<code>CH_Wraith</code></a>"
               }
 
           ]
