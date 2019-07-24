@@ -24,26 +24,37 @@
     <h1>TPS Study</h1>
       <h4>Third Person Shooter Study</h4>
       <table>
-        <tr>
-          <td>game engine</td>
-          <td>Unreal Engine 4.22</td>
-        </tr>
-        <tr>
-          <td>project name</td>
-          <td><b>TPS_Study</b></td>
-        </tr>
-        <tr>
-          <td>project template</td>
-          <td>Third Person Character</td>
-        </tr>
-        <tr>
-          <td>project status</td>
-          <td>ongoing</td>
-        </tr>
-        <tr>
-          <td>project repo</td>
-          <td><a href="https://github.com/Arza-3d/TPS_study">github.com/Arza-3d/TPS_study</a></td>
-        </tr>
+        <tbody>
+          <tr>
+            <td>game engine</td>
+            <td>Unreal Engine 4.22</td>
+          </tr>
+          <tr>
+            <td>project name</td>
+            <td><b>TPS_Study</b></td>
+          </tr>
+          <tr>
+            <td>project template</td>
+            <td>Third Person Character</td>
+          </tr>
+          <tr>
+            <td>project status</td>
+            <td>ongoing</td>
+          </tr>
+          <tr>
+            <td>project repo</td>
+            <td><a href="https://github.com/Arza-3d/TPS_study">github.com/Arza-3d/TPS_study</a></td>
+          </tr>
+          <tr>
+            <td>git-LFS</td>
+            <td>yes</td>
+          </tr>
+          <tr>
+            <td>project dependencies</td>
+            <td>list here</td>
+          </tr>
+        </tbody>
+
       </table>
 
       <p>
@@ -63,6 +74,12 @@
 
         <h3 id="TPS_studyCharacter">TPS_studyCharacter</h3>
         <section>
+          <code>ACharacter</code>
+          ►
+          <code>
+            <a href="https://github.com/Arza-3d/TPS_study/blob/master/Source/TPS_study/TPS_studyCharacter.h">TPS_studyCharacter</a>
+          </code>
+          <hr>
           <p>
             This is the <b>C++</b> class that will be based of the third person shooter character.
             Currently this is just the default Third Person C++ template.
@@ -93,7 +110,7 @@
                 <td><img src="https://i.ibb.co/12sxdYM/m-click25.png" alt="mouse input" style="border:none"></td>
                 <td>
                   <code>TurnAtRate()</code>,
-                  <code>LookUpRate()</code>
+                  <code>LookUpAtRate()</code>
                 </td>
               </tr>
             </tbody>
@@ -118,10 +135,44 @@
             </div>
         </section>
 
-        <h3 id="CH_TPShooter">ThirdPersonCharacter</h3>
+        <h3 id="CH_TPShooter">CH_TPShooter</h3>
         <section>
+          <code>ACharacter</code>
+          ►
+          <code>TPS_studyCharacter</code>
+          ►
           <code><a href="https://github.com/Arza-3d/TPS_study/blob/master/Content/Character/CH_TPShooter.uasset">CH_TPShooter</a></code>
           <hr>
+
+          <table>
+            <thead>
+              <tr>
+                <th>functionality</th>
+                <th>function()</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>aiming</td>
+                <td>
+                  <code>StartAiming()</code> ,
+                  <code>StopAiming()</code>
+                </td>
+              </tr>
+              <tr>
+                <td>fire</td>
+                <td>
+                  <code>Fire()</code> ,
+                  <code>Autofire()</code>
+                </td>
+              </tr>
+            </tbody>
+
+          </table>
+
+          <hr>
+
+
           <ol>
             <li>add 2 floats to track char movement for anim blend</li>
             <li>add function that destroy array of particles</li>
