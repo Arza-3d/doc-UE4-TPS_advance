@@ -12,6 +12,14 @@
     <link href="ar3.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/treant-js/1.0/Treant.css" type="text/css"/>
     <title>TPS study</title>
+    <style media="screen">
+      td > ol, ul {
+        margin-top: 0 !important;
+      }
+      .xnote-r3 {
+        font-size: smaller;
+      }
+    </style>
   </head>
   <body
     data-repo-r3="https://github.com/Arza-3d/TPS_study"
@@ -74,16 +82,16 @@
         <section>
           <code>ACharacter</code>
           ►
-          <code>
-            <a href="https://github.com/Arza-3d/TPS_study/blob/master/Source/TPS_study/TPS_studyCharacter.h">TPS_studyCharacter</a>
-          </code>
+          <a href="https://github.com/Arza-3d/TPS_study/blob/master/Source/TPS_study/TPS_studyCharacter.h">
+            <code>TPS_studyCharacter</code>
+          </a>
           <hr>
           <p>
             This is the <b>C++</b> class that will be based of the third person shooter character.
             Currently this is just the default Third Person C++ template.
           </p>
           <p>
-            Below is the main functionality of this class:
+            Below is the basic functionality of this class:
           </p>
           <table>
             <thead>
@@ -139,14 +147,20 @@
           ►
           <code>TPS_studyCharacter</code>
           ►
-          <code><a href="https://github.com/Arza-3d/TPS_study/blob/master/Content/Character/CH_TPShooter.uasset">CH_TPShooter</a></code>
+          <a href="https://github.com/Arza-3d/TPS_study/tree/master/Content/Character">
+            <code>CH_TPShooter</code>
+          </a>
           <hr>
-
+          <p>
+            This is the <b>blueprint class</b> base for all of the third person character.
+          </p>
+          <p>Below is the main functionality of this class:</p>
           <table>
             <thead>
               <tr>
                 <th>functionality</th>
                 <th>function()</th>
+                <th>note</th>
               </tr>
             </thead>
             <tbody>
@@ -156,6 +170,16 @@
                   <code>StartAiming()</code> ,
                   <code>StopAiming()</code>
                 </td>
+                <td>
+                  Have to use 2 events for smooth camera transition.<br><br>
+                  By default character can't aim while:
+                  <ul>
+                    <li>in the air</li>
+                    <li>changing weapon</li>
+                    <li>stunned or damaged</li>
+                  </ul>
+
+                </td>
               </tr>
               <tr>
                 <td>fire</td>
@@ -163,12 +187,27 @@
                   <code>Fire()</code> ,
                   <code>Autofire()</code>
                 </td>
+                <td>
+                  have option for automatic weapon
+                </td>
               </tr>
               <tr>
                 <td>switch weapon</td>
                 <td>
-                  <code>ChangeWeapon()</code> ,
-                  <code>SwitchWeapon()</code>
+                  <code>SwitchWeaponWithNumpad()</code> ,<br>
+                  <code>SwitchWeaponWithMouseWheel()</code>
+                </td>
+                <td>
+                  switch weapon with:
+                  <kbd>1</kbd>,
+                  <kbd>2</kbd>,
+                  <kbd>3</kbd>,
+                  <kbd>4</kbd>,
+                  <kbd>5</kbd>,
+                  <kbd>6</kbd>,
+                  <kbd>7</kbd>,
+                  <kbd>8</kbd>,
+                  <br> or by scrolling mouse wheel
                 </td>
               </tr>
             </tbody>
@@ -176,80 +215,141 @@
           </table>
 
           <hr>
-
-
-          <ol>
-            <li>add 2 floats to track char movement for anim blend</li>
-            <li>add function that destroy array of particles</li>
-          </ol>
-
-          <ol>
-            <li>add aiming ability
-              <br>update:
-              <ol>
-                <li>can't aim while jumping (editable)</li>
-                <li>add crosshair
-                  <br>update:
-                  <ul>
-                    <li>add custom crosshair</li>
-                  </ul>
-                </li>
-              </ol>
-            </li>
-            <li>add ability to shoot to the target at center of the screen.
-              <br>update:
-              <ol>
-                <li>if socket doesn't exist will shoot from around the head</li>
-              </ol>
-            </li>
-            <li>add change weapon
-              <br>update:
-              <ol>
-                <li>can not change weapon while aiming</li>
-              </ol>
-            </li>
-          </ol>
+          <details class="xnote-r3">
+            <summary>extra note:</summary>
+            need to rotate the mesh 270 degree and drop it 97 cm
+            to make it facing front and walking on the ground.<br>
+            This is prolly due to Maya ro UE4 workflow.
+          </details>
         </section>
 
         <h2>Heroes</h2>
 
         <h3 id="CH_Belica">Belica</h3>
         <section>
+          <code>ACharacter</code>
+          ►
+          <code>TPS_studyCharacter</code>
+          ►
+          <code>CH_TPShooter</code>
+          ►
+          <a href="https://github.com/Arza-3d/TPS_study/tree/master/Content/Character/Heroes/Belica">
+            <code>CH_Belica</code>
+          </a>
+          <hr>
+          <img src='https://i.ibb.co/DLKb15z/TPS-belica.jpg'/>
           <p>...</p>
         </section>
 
         <h3 id="CH_Drongo">Drongo</h3>
         <section>
+          <code>ACharacter</code>
+          ►
+          <code>TPS_studyCharacter</code>
+          ►
+          <code>CH_TPShooter</code>
+          ►
+          <a href="https://github.com/Arza-3d/TPS_study/tree/master/Content/Character/Heroes/Drongo">
+            <code>CH_Drongo</code>
+          </a>
+          <hr>
+          <img src='https://i.ibb.co/Lt574qH/TPS-drongo.jpg'/>
           <p>...</p>
         </section>
 
         <h3 id="CH_Grimexe">Grimexe</h3>
         <section>
+          <code>ACharacter</code>
+          ►
+          <code>TPS_studyCharacter</code>
+          ►
+          <code>CH_TPShooter</code>
+          ►
+          <a href="https://github.com/Arza-3d/TPS_study/tree/master/Content/Character/Heroes/Grimexe">
+            <code>CH_Grimexe</code>
+          </a>
+          <hr>
+          <img src='https://i.ibb.co/p06fqY4/TPS-grimexe.jpg'/>
           <p>...</p>
         </section>
 
         <h3 id="CH_Howitzer">Howitzer</h3>
         <section>
+          <code>ACharacter</code>
+          ►
+          <code>TPS_studyCharacter</code>
+          ►
+          <code>CH_TPShooter</code>
+          ►
+          <a href="https://github.com/Arza-3d/TPS_study/tree/master/Content/Character/Heroes/Howitzer">
+            <code>CH_Howitzer</code>
+          </a>
+          <hr>
+          <img src='https://i.ibb.co/SNvxH0y/TPS-howitzer.jpg'/>
           <p>...</p>
         </section>
 
         <h3 id="CH_Revenant">Revenant</h3>
         <section>
+          <code>ACharacter</code>
+          ►
+          <code>TPS_studyCharacter</code>
+          ►
+          <code>CH_TPShooter</code>
+          ►
+          <a href="https://github.com/Arza-3d/TPS_study/tree/master/Content/Character/Heroes/Revenant">
+            <code>CH_Revenant</code>
+          </a>
+          <hr>
+          <img src='https://i.ibb.co/8d7Kdps/TPS-revenant.jpg'/>
           <p>...</p>
         </section>
 
         <h3 id="CH_Sparrow">Sparrow</h3>
         <section>
+          <code>ACharacter</code>
+          ►
+          <code>TPS_studyCharacter</code>
+          ►
+          <code>CH_TPShooter</code>
+          ►
+          <a href="https://github.com/Arza-3d/TPS_study/tree/master/Content/Character/Heroes/Sparrow">
+            <code>CH_Sparrow</code>
+          </a>
+          <hr>
+          <img src='https://i.ibb.co/8PHRqZN/TPS-sparrow.jpg'/>
           <p>...</p>
         </section>
 
         <h3 id="CH_Twinblast">Twinblast</h3>
         <section>
+          <code>ACharacter</code>
+          ►
+          <code>TPS_studyCharacter</code>
+          ►
+          <code>CH_TPShooter</code>
+          ►
+          <a href="https://github.com/Arza-3d/TPS_study/tree/master/Content/Character/Heroes/Twinblast">
+            <code>CH_Twinblast</code>
+          </a>
+          <hr>
+          <img src='https://i.ibb.co/8r6dfw4/TPS-twinblast.jpg'/>
           <p>...</p>
         </section>
 
         <h3 id="CH_Wraith">Wraith</h3>
         <section>
+          <code>ACharacter</code>
+          ►
+          <code>TPS_studyCharacter</code>
+          ►
+          <code>CH_TPShooter</code>
+          ►
+          <a href="https://github.com/Arza-3d/TPS_study/tree/master/Content/Character/Heroes/Wraith">
+            <code>CH_Wraith</code>
+          </a>
+          <hr>
+          <img src='https://i.ibb.co/SsC7JnT/TPS-wraith.jpg'/>
           <p>...</p>
         </section>
 
