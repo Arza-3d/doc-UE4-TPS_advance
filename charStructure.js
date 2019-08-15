@@ -9,17 +9,17 @@
     },
 
     nodeStructure: {
-      innerHTML: "<code title='ACharacter class from the UE4'><a href='https://api.unrealengine.com/INT/API/Runtime/Engine/GameFramework/ACharacter/index.html'>ACharacter</a></code>"
+      innerHTML: `<span class="no-copy-r3">C++</span> <code title='ACharacter class from the UE4'><a href='https://api.unrealengine.com/INT/API/Runtime/Engine/GameFramework/ACharacter/index.html'>ACharacter</a></code>`
       ,children: [{
-        innerHTML:  "<code title='C++ class base'><a href='#TPS_studyCharacter'>TPS_studyCharacter</a></code>"
+        innerHTML:  `<span class="no-copy-r3">C++</span> <code title='C++ class base'><a href='#ATPS_studyCharacter'>ATPS_studyCharacter</a></code>`
         ,children: [
           {
             innerHTML: "<code title='blueprint class base'><a href='#CH_TPShooter'>CH_TPShooter</a></code>",
             children: [
                 {
                     innerHTML:
-                    "<a href='#CH_Belica'><img src='https://i.ibb.co/DLKb15z/TPS-belica.jpg'/>" +
-                    "<code>CH_Belica</code></a>"
+                    `<a href='#CH_Belica'><img src='https://i.ibb.co/DLKb15z/TPS-belica.jpg'/>
+                    <code>CH_Belica</code></a>`
                 }
                 ,{
                     innerHTML:
