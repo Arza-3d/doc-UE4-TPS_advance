@@ -108,6 +108,61 @@
           <p>
             This is the <b>C++</b> class that will be based of the third person shooter character.
           </p>
+          <p>Below is the main functionality of this class:</p>
+          <table>
+            <thead>
+              <tr>
+                <th>functionality</th>
+                <th>function()</th>
+                <th>note</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>aiming</td>
+                <td>
+                  <code>StartAiming()</code> ,
+                  <code>StopAiming()</code>
+                </td>
+                <td>
+                  Have to use 2 events for smooth camera transition.<br><br>
+                  By default character can't aim while:
+                  <ul>
+                    <li>in the air</li>
+                    <li>changing weapon</li>
+                    <li>stunned or damaged</li>
+                  </ul>
+
+                </td>
+              </tr>
+              <tr>
+                <td>fire</td>
+                <td>
+                  <code>Fire()</code> ,
+                  <code>Autofire()</code>
+                </td>
+                <td>
+                  have option for automatic weapon
+                </td>
+              </tr>
+              <tr>
+                <td>switch weapon</td>
+                <td>
+                  <code>SwitchWeaponWithNumpad()</code> ,<br>
+                  <code>SwitchWeaponWithMouseWheel()</code>
+                </td>
+                <td>
+                  switch weapon with:
+                  <kbd>1</kbd>,
+                  <kbd>2</kbd>,
+                  <kbd>3</kbd>,
+                  <kbd>4</kbd>
+                  <br> or by scrolling mouse wheel
+                </td>
+              </tr>
+            </tbody>
+
+          </table>
 
           <div class="tab-r3">
               <nav>
@@ -161,74 +216,13 @@
           <hr>
           <p>
             This is the <b>blueprint class</b> base for all of the heroes <br><span class="comment-r3">(player third person character)</span>.
+            <br>This class is use for:
           </p>
-          <p>Below is the main functionality of this class:</p>
-          <table>
-            <thead>
-              <tr>
-                <th>functionality</th>
-                <th>function()</th>
-                <th>note</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>aiming</td>
-                <td>
-                  <code>StartAiming()</code> ,
-                  <code>StopAiming()</code>
-                </td>
-                <td>
-                  Have to use 2 events for smooth camera transition.<br><br>
-                  By default character can't aim while:
-                  <ul>
-                    <li>in the air</li>
-                    <li>changing weapon</li>
-                    <li>stunned or damaged</li>
-                  </ul>
+          <ul>
+            <li>prototyping in BP, then I can move it to C++</li>
+            <li>using it to call interface</li>
+          </ul>
 
-                </td>
-              </tr>
-              <tr>
-                <td>fire</td>
-                <td>
-                  <code>Fire()</code> ,
-                  <code>Autofire()</code>
-                </td>
-                <td>
-                  have option for automatic weapon
-                </td>
-              </tr>
-              <tr>
-                <td>switch weapon</td>
-                <td>
-                  <code>SwitchWeaponWithNumpad()</code> ,<br>
-                  <code>SwitchWeaponWithMouseWheel()</code>
-                </td>
-                <td>
-                  switch weapon with:
-                  <kbd>1</kbd>,
-                  <kbd>2</kbd>,
-                  <kbd>3</kbd>,
-                  <kbd>4</kbd>,
-                  <kbd>5</kbd>,
-                  <kbd>6</kbd>,
-                  <kbd>7</kbd>,
-                  <kbd>8</kbd>,
-                  <br> or by scrolling mouse wheel
-                </td>
-              </tr>
-            </tbody>
-
-          </table>
-
-          <hr>
-          <details class="xnote-r3">
-            <summary>extra note:</summary>
-            need to rotate the mesh 270 degree and drop it 97 cm
-            to make it facing front and walking on the ground.<br>
-            This is prolly due to Maya to UE4 workflow.
-          </details>
         </section>
 
         <h2>Heroes</h2>
