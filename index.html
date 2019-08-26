@@ -97,72 +97,18 @@
         <p>Below is the data structure for the player classes</p>
         <div id="tree-simple" style="overflow:auto"> </div>
 
-        <h3 id="ATPS_studyCharacter">ATPS_studyCharacter</h3>
+        <h3 id="ATPShooterCharacter">ATPShooterCharacter</h3>
         <section>
           <code>ACharacter</code>
           ►
           <a href="https://github.com/Arza-3d/TPS_study/blob/master/Source/TPS_study/TPS_studyCharacter.h">
-            <code>ATPS_studyCharacter</code>
+            <code>ATPShooterCharacter</code>
           </a>
           <hr>
           <p>
             This is the <b>C++</b> class that will be based of the third person shooter character.
           </p>
           <p>Below is the main functionality of this class:</p>
-          <table>
-            <thead>
-              <tr>
-                <th>functionality</th>
-                <th>function()</th>
-                <th>note</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>aiming</td>
-                <td>
-                  <code>StartAiming()</code> ,
-                  <code>StopAiming()</code>
-                </td>
-                <td>
-                  Have to use 2 events for smooth camera transition.<br><br>
-                  By default character can't aim while:
-                  <ul>
-                    <li>in the air</li>
-                    <li>changing weapon</li>
-                    <li>stunned or damaged</li>
-                  </ul>
-
-                </td>
-              </tr>
-              <tr>
-                <td>fire</td>
-                <td>
-                  <code>Fire()</code> ,
-                  <code>Autofire()</code>
-                </td>
-                <td>
-                  have option for automatic weapon
-                </td>
-              </tr>
-              <tr>
-                <td>switch weapon</td>
-                <td>
-                  <code>SwitchWeaponWithNumpad()</code> ,<br>
-                  <code>SwitchWeaponWithMouseWheel()</code>
-                </td>
-                <td>
-                  switch weapon with:
-                  <kbd>1</kbd>,
-                  <kbd>2</kbd>,
-                  <kbd>3</kbd>,
-                  <kbd>4</kbd>
-                  <br> or by scrolling mouse wheel
-                </td>
-              </tr>
-            </tbody>
-
-          </table>
 
           <div class="tab-r3">
               <nav>
@@ -173,30 +119,50 @@
              <div>
                <div>
                  <p>class member declaration:</p>
-                 <script src="https://gist-it.appspot.com/https://github.com/Arza-3d/TPS_study/blob/master/Source/TPS_study/TPS_studyCharacter.h"></script>
+                 <script src="https://gist-it.appspot.com/https://github.com/Arza-3d/TPS_study/blob/master/Source/TPS_study/Public/TPShooterCharacter.h"></script>
                </div>
                <div>
                  <p>class functionality:</p>
-                 <script src="https://gist-it.appspot.com/https://github.com/Arza-3d/TPS_study/blob/master/Source/TPS_study/TPS_studyCharacter.cpp"></script>
+                 <script src="https://gist-it.appspot.com/https://github.com/Arza-3d/TPS_study/blob/master/Source/TPS_study/Private/TPShooterCharacter.cpp"></script>
                </div>
              </div>
           </div>
-          <h4>UTPS_FunctionLibrary</h4>
+          <h4>Component:</h4>
+
+          <p>Container of the shooting functionality:</p>
           <div class="tab-r3">
               <nav>
-               <a>UTPS_FunctionLibrary.h</a>
+               <a>RangedWeapon.h</a>
                <span>+</span>
-               <a>UTPS_FunctionLibrary.cpp</a>
+               <a>RangedWeapon.cpp</a>
              </nav>
-
              <div>
                <div>
                  <p>class member declaration:</p>
-                 <script src="https://gist-it.appspot.com/https://github.com/Arza-3d/TPS_study/blob/master/Source/TPS_study/Public/TPS_FunctionLibrary.h"></script>
+                 <script src="https://gist-it.appspot.com/https://github.com/Arza-3d/TPS_study/blob/master/Source/TPS_study/Public/RangedWeapon.h"></script>
                </div>
                <div>
                  <p>class functionality:</p>
-                 <script src="https://gist-it.appspot.com/https://github.com/Arza-3d/TPS_study/blob/master/Source/TPS_study/Private/TPS_FunctionLibrary.cpp"></script>
+                 <script src="https://gist-it.appspot.com/https://github.com/Arza-3d/TPS_study/blob/master/Source/TPS_study/Private/RangedWeapon.cpp"></script>
+               </div>
+             </div>
+          </div>
+
+          <p>Container of the enum:</p>
+          <div class="tab-r3">
+              <nav>
+               <a>UTPSFunctionLibrary.h</a>
+               <span>+</span>
+               <a>UTPSFunctionLibrary.cpp</a>
+             </nav>
+             <div>
+               <div>
+                 <p>class member declaration:</p>
+                 <script src="https://gist-it.appspot.com/https://github.com/Arza-3d/TPS_study/blob/master/Source/TPS_study/Public/TPSFunctionLibrary.h"></script>
+               </div>
+               <div>
+                 <p>class functionality:</p>
+                 <script src="https://gist-it.appspot.com/https://github.com/Arza-3d/TPS_study/blob/master/Source/TPS_study/Private/TPSFunctionLibrary.cpp"></script>
                </div>
              </div>
           </div>
@@ -208,7 +174,7 @@
         <section>
           <code>ACharacter</code>
           ►
-          <code>ATPS_studyCharacter</code>
+          <code>ATPShooterCharacter</code>
           ►
           <a href="https://github.com/Arza-3d/TPS_study/tree/master/Content/Character">
             <code>CH_TPShooter</code>
@@ -231,7 +197,7 @@
         <section>
           <code>ACharacter</code>
           ►
-          <code>ATPS_studyCharacter</code>
+          <code>ATPShooterCharacter</code>
           ►
           <code>CH_TPShooter</code>
           ►
@@ -247,7 +213,7 @@
         <section>
           <code>ACharacter</code>
           ►
-          <code>ATPS_studyCharacter</code>
+          <code>ATPShooterCharacter</code>
           ►
           <code>CH_TPShooter</code>
           ►
@@ -263,7 +229,7 @@
         <section>
           <code>ACharacter</code>
           ►
-          <code>ATPS_studyCharacter</code>
+          <code>ATPShooterCharacter</code>
           ►
           <code>CH_TPShooter</code>
           ►
@@ -279,7 +245,7 @@
         <section>
           <code>ACharacter</code>
           ►
-          <code>ATPS_studyCharacter</code>
+          <code>ATPShooterCharacter</code>
           ►
           <code>CH_TPShooter</code>
           ►
@@ -295,7 +261,7 @@
         <section>
           <code>ACharacter</code>
           ►
-          <code>ATPS_studyCharacter</code>
+          <code>ATPShooterCharacter</code>
           ►
           <code>CH_TPShooter</code>
           ►
@@ -311,7 +277,7 @@
         <section>
           <code>ACharacter</code>
           ►
-          <code>ATPS_studyCharacter</code>
+          <code>ATPShooterCharacter</code>
           ►
           <code>CH_TPShooter</code>
           ►
@@ -327,7 +293,7 @@
         <section>
           <code>ACharacter</code>
           ►
-          <code>ATPS_studyCharacter</code>
+          <code>ATPShooterCharacter</code>
           ►
           <code>CH_TPShooter</code>
           ►
@@ -343,7 +309,7 @@
         <section>
           <code>ACharacter</code>
           ►
-          <code>ATPS_studyCharacter</code>
+          <code>ATPShooterCharacter</code>
           ►
           <code>CH_TPShooter</code>
           ►
@@ -406,11 +372,11 @@
     <script src="https://raw.githack.com/Arza-3d/ar3.js/master/ar3.min.js"></script>
   -->
     <script type="text/javascript">
-      $('.com').css(
+      /*$('.com').css(
         {
           'color' : 'rgba(0,0,0,0.25)'
         }
-      );
+      );*/
       $('.com:contains("#include")').css(
         {
           'font-style' : 'normal',

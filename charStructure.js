@@ -11,7 +11,7 @@
     nodeStructure: {
       innerHTML: `<span class="no-copy-r3">C++</span> <code title='ACharacter class from the UE4'><a href='https://api.unrealengine.com/INT/API/Runtime/Engine/GameFramework/ACharacter/index.html'>ACharacter</a></code>`
       ,children: [{
-        innerHTML:  `<span class="no-copy-r3">C++</span> <code title='C++ class base'><a href='#ATPS_studyCharacter'>ATPS_studyCharacter</a></code>`
+        innerHTML:  `<span class="no-copy-r3">C++</span> <code title='C++ class base'><a href='#ATPShooterCharacter'>ATPShooterCharacter</a></code>`
         ,children: [
           {
             innerHTML: "<code title='blueprint class base'><a href='#CH_TPShooter'>CH_TPShooter</a></code>",
